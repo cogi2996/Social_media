@@ -1,0 +1,28 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* font-size: 62.5%; */
+	overflow-x: hidden;
+}
+
+button {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+input[type="text" i] {
+	writing-mode: horizontal-tb !important;
+	padding-block: 1px;
+	padding-inline: 2px;
+}
