@@ -7,11 +7,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
   <link rel="stylesheet" href="./assets/styles/reset.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
   <!-- <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.min.css" /> -->
   <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
@@ -31,24 +33,24 @@
         <input class="col-2 nav__search" type="search" placeholder="Search" aria-label="Search" />
       </div>
       <div class="col-6 nav-center">
-        <ul class="row nav justify-content-center">
+        <ul class="nav nav-underline justify-content-center">
           <li class="nav-item col">
-            <a class="nav-link active text-center" aria-current="page" href="#">
+            <a class="nav-link active text-center" aria-current="page" href="#" onclick="handleActive()">
               <i class="fa-solid fa-house icon"></i>
             </a>
           </li>
           <li class="nav-item col">
-            <a class="nav-link text-center" href="#">
+            <a class="nav-link text-center" href="#" onclick="handleActive()">
               <i class="fa-solid fa-user-group icon"></i>
             </a>
           </li>
           <li class="nav-item col">
-            <a class="nav-link text-center" href="#">
+            <a class="nav-link text-center" href="#" onclick="handleActive()">
               <i class="fa-solid fa-users-line icon"></i>
             </a>
           </li>
           <li class="nav-item col">
-            <a class="nav-link text-center" href="#">
+            <a class="nav-link text-center" href="#" onclick="handleActive()">
               <i class="fa-solid fa-briefcase icon"></i>
             </a>
           </li>
@@ -113,270 +115,29 @@
           <div class="content-media"></div>
         </div>
         <div class="post__feedback">
-          <div class="feedback__action">
-            <button type="button" class="feedback__btn active">
-              <i class="fa-solid fa-thumbs-up icon"></i>
-              <p>100 Like</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-regular fa-comment icon"></i>
-              <p>44 Comment</p>
-            </button>
-            <button type="button" class="feedback__btn btn">
-              <i class="fa-solid fa-share icon"></i>
-              <p>2 Share</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </div>
-        </div>
-      </li>
-      <li class="wrapper post">
-        <div class="post__header">
-          <div class="group">
-            <img class="group-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                height: 36px;
-                width: 36px;">
-            <p class="group-name">KTX ĐHQG TP.HCM</p>
-          </div>
-          <div class="user">
-            <img class="user-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                height: 24px;
-                width: 24px;">
-            <p class="user-name">Mỹ Phụng</p>
-          </div>
-        </div>
-        <div class="post__content">
-          <div class="content-text">
-            GỬI CON.
-            Có ai khen con đẹp. Con hãy cảm ơn và quên đi lời khen ấy
-            Ai bảo con ngoan. Hãy cảm ơn và nhớ ngoan hiền hơn nữa
-            Với người òa khóc vì nỗi đau mà họ đang mang… See more
-          </div>
-          <div class="content-media"></div>
-        </div>
-        <div class="post__feedback">
-          <div class="feedback__action">
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-thumbs-up icon"></i>
-              <p>100 Like</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-regular fa-comment icon"></i>
-              <p>44 Comment</p>
-            </button>
-            <button type="button" class="feedback__btn btn">
-              <i class="fa-solid fa-share icon"></i>
-              <p>2 Share</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </div>
-        </div>
-      </li>
-      <li class="wrapper post">
-        <div class="post__header">
-          <div class="group">
-            <img class="group-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                  height: 36px;
-                  width: 36px;">
-            <p class="group-name">KTX ĐHQG TP.HCM</p>
-          </div>
-          <div class="user">
-            <img class="user-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                  height: 24px;
-                  width: 24px;">
-            <p class="user-name">Mỹ Phụng</p>
-          </div>
-        </div>
-        <div class="post__content">
-          <div class="content-text">
-            GỬI CON.
-            Có ai khen con đẹp. Con hãy cảm ơn và quên đi lời khen ấy
-            Ai bảo con ngoan. Hãy cảm ơn và nhớ ngoan hiền hơn nữa
-            Với người òa khóc vì nỗi đau mà họ đang mang… See more
-          </div>
-          <div class="content-media"></div>
-        </div>
-        <div class="post__feedback">
-          <div class="feedback__action">
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-thumbs-up icon"></i>
-              <p>100 Like</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-regular fa-comment icon"></i>
-              <p>44 Comment</p>
-            </button>
-            <button type="button" class="feedback__btn btn">
-              <i class="fa-solid fa-share icon"></i>
-              <p>2 Share</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </div>
-        </div>
-      </li>
-      <li class="wrapper post">
-        <div class="post__header">
-          <div class="group">
-            <img class="group-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                    height: 36px;
-                    width: 36px;">
-            <p class="group-name">KTX ĐHQG TP.HCM</p>
-          </div>
-          <div class="user">
-            <img class="user-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                    height: 24px;
-                    width: 24px;">
-            <p class="user-name">Mỹ Phụng</p>
-          </div>
-        </div>
-        <div class="post__content">
-          <div class="content-text">
-            GỬI CON.
-            Có ai khen con đẹp. Con hãy cảm ơn và quên đi lời khen ấy
-            Ai bảo con ngoan. Hãy cảm ơn và nhớ ngoan hiền hơn nữa
-            Với người òa khóc vì nỗi đau mà họ đang mang… See more
-          </div>
-          <div class="content-media"></div>
-        </div>
-        <div class="post__feedback">
-          <div class="feedback__action">
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-thumbs-up icon"></i>
-              <p>100 Like</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-regular fa-comment icon"></i>
-              <p>44 Comment</p>
-            </button>
-            <button type="button" class="feedback__btn btn">
-              <i class="fa-solid fa-share icon"></i>
-              <p>2 Share</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </div>
-        </div>
-      </li>
-      <li class="wrapper post">
-        <div class="post__header">
-          <div class="group">
-            <img class="group-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                      height: 36px;
-                      width: 36px;">
-            <p class="group-name">KTX ĐHQG TP.HCM</p>
-          </div>
-          <div class="user">
-            <img class="user-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                      height: 24px;
-                      width: 24px;">
-            <p class="user-name">Mỹ Phụng</p>
-          </div>
-        </div>
-        <div class="post__content">
-          <div class="content-text">
-            GỬI CON.
-            Có ai khen con đẹp. Con hãy cảm ơn và quên đi lời khen ấy
-            Ai bảo con ngoan. Hãy cảm ơn và nhớ ngoan hiền hơn nữa
-            Với người òa khóc vì nỗi đau mà họ đang mang… See more
-          </div>
-          <div class="content-media"></div>
-        </div>
-        <div class="post__feedback">
-          <div class="feedback__action">
-            <button type="button" class="feedback__btn active">
-              <i class="fa-solid fa-thumbs-up icon"></i>
-              <p>100 Like</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-regular fa-comment icon"></i>
-              <p>44 Comment</p>
-            </button>
-            <button type="button" class="feedback__btn btn">
-              <i class="fa-solid fa-share icon"></i>
-              <p>2 Share</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </div>
-        </div>
-      </li>
-      <li class="wrapper post">
-        <div class="post__header">
-          <div class="group">
-            <img class="group-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                        height: 36px;
-                        width: 36px;">
-            <p class="group-name">KTX ĐHQG TP.HCM</p>
-          </div>
-          <div class="user">
-            <img class="user-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-                        height: 24px;
-                        width: 24px;">
-            <p class="user-name">Mỹ Phụng</p>
-          </div>
-        </div>
-        <div class="post__content">
-          <div class="content-text">
-            GỬI CON.
-            Có ai khen con đẹp. Con hãy cảm ơn và quên đi lời khen ấy
-            Ai bảo con ngoan. Hãy cảm ơn và nhớ ngoan hiền hơn nữa
-            Với người òa khóc vì nỗi đau mà họ đang mang… See more
-          </div>
-          <div class="content-media"></div>
-        </div>
-        <div class="post__feedback">
-          <div class="feedback__action">
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-thumbs-up icon"></i>
-              <p>100 Like</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-regular fa-comment icon"></i>
-              <p>44 Comment</p>
-            </button>
-            <button type="button" class="feedback__btn btn">
-              <i class="fa-solid fa-share icon"></i>
-              <p>2 Share</p>
-            </button>
-            <button type="button" class="feedback__btn">
-              <i class="fa-solid fa-ellipsis-vertical"></i>
-            </button>
-          </div>
+          <button type="button" class="feedback__btn active" onclick="handelToggleLike()">
+            <i class="fa-solid fa-thumbs-up icon"></i>
+            <p>100 Like</p>
+          </button>
+          <button type="button" class="feedback__btn">
+            <i class="fa-regular fa-comment icon"></i>
+            <p>44 Comment</p>
+          </button>
+          <button type="button" class="feedback__btn">
+            <i class="fa-solid fa-share icon"></i>
+            <p>44 Comment</p>
+          </button>
+          </button>
+          <button type="button" class="feedback__btn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
         </div>
       </li>
     </ul>
   </main>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./script/home.js">
+  </script>
 </body>
 
 </html>
