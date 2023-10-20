@@ -15,7 +15,8 @@
 
 
   <!-- <link rel="stylesheet" href="/fontawesome-free-6.4.2-web/css/all.min.css" /> -->
-  <link rel="stylesheet" href="./assets/styles/main.css">
+  <link rel="stylesheet" href="./assets/styles/common.css">
+  <link rel="stylesheet" href="./assets/styles/home.css">
 </head>
 
 <body>
@@ -31,6 +32,38 @@
           </g>
         </svg>
         <input class="col-2 nav__search" type="search" placeholder="Search" aria-label="Search" />
+        <div class="search-modal">
+          <p class="search-modal__title">Recent</p>
+          <ul class="list-group search-modal__result">
+            <li class="list-group-item search-modal__item row">
+              <img class="user-avatar col-2" alt="Subreddit Icon" role="presentation"
+                src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
+                class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);">
+              <p class="user-name col-6">Mỹ Phụng</p>
+              <button class="close-btn col-2">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </li>
+            <li class="list-group-item search-modal__item">
+              <img class="user-avatar" alt="Subreddit Icon" role="presentation"
+                src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
+                class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);">
+              <p class="user-name">Mỹ Phụng</p>
+            </li>
+            <li class="list-group-item search-modal__item">
+              <img class="user-avatar" alt="Subreddit Icon" role="presentation"
+                src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
+                class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);">
+              <p class="user-name">Mỹ Phụng</p>
+            </li>
+            <li class="list-group-item search-modal__item">
+              <img class="user-avatar" alt="Subreddit Icon" role="presentation"
+                src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
+                class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);">
+              <p class="user-name">Mỹ Phụng</p>
+            </li>
+          </ul>
+        </div>
       </div>
       <div class="col-6 nav-center">
         <ul class="nav nav-underline justify-content-center">
@@ -88,21 +121,54 @@
     <ul class="list-post">
       <li class="wrapper post">
         <div class="post__header">
-          <div class="group">
-            <img class="group-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-              height: 36px;
-              width: 36px;">
-            <p class="group-name">KTX ĐHQG TP.HCM</p>
+          <div class="main-author">
+            <img class="main-author__avatar" alt="Subreddit Icon" role="presentation"
+              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png">
+            <p class="main-author__name">KTX ĐHQG TP.HCM</p>
           </div>
-          <div class="user">
-            <img class="user-avatar" alt="Subreddit Icon" role="presentation"
-              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png"
-              class="_34CfAAowTqdbNDYXz5tBTW _1WX5Y5qFVBTdr6hCPpARDB " style="background-color: rgb(55, 60, 63);
-              height: 24px;
-              width: 24px;">
-            <p class="user-name">Mỹ Phụng</p>
+          <div class="sub-author">
+            <img class="sub-author__avatar" alt="Subreddit Icon" role="presentation"
+              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png">
+            <p class="sub-author__name">Mỹ Phụng</p>
+          </div>
+        </div>
+        <div class="post__content">
+          <div class="content-text">
+            GỬI CON.
+            Có ai khen con đẹp. Con hãy cảm ơn và quên đi lời khen ấy
+            Ai bảo con ngoan. Hãy cảm ơn và nhớ ngoan hiền hơn nữa
+            Với người òa khóc vì nỗi đau mà họ đang mang… See more
+          </div>
+          <div class="content-media"></div>
+        </div>
+        <div class="post__feedback">
+          <button type="button" class="feedback__btn active" onclick="handelToggleLike()">
+            <i class="fa-solid fa-thumbs-up icon"></i>
+            <p>100 Like</p>
+          </button>
+          <button type="button" class="feedback__btn">
+            <i class="fa-regular fa-comment icon"></i>
+            <p>44 Comment</p>
+          </button>
+          <button type="button" class="feedback__btn">
+            <i class="fa-solid fa-share icon"></i>
+            <p>44 Comment</p>
+          </button>
+          </button>
+          <button type="button" class="feedback__btn">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </li>
+    </ul>
+
+    <ul class="list-post">
+      <li class="wrapper post">
+        <div class="post__header">
+          <div class="main-author">
+            <img class="main-author__avatar" alt="Subreddit Icon" role="presentation"
+              src="https://styles.redditmedia.com/t5_356bu/styles/communityIcon_ski6pyqvm4t11.png">
+            <p class=" main-author__name">Mỹ Phụng</p>
           </div>
         </div>
         <div class="post__content">
@@ -136,7 +202,7 @@
     </ul>
   </main>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./script/home.js">
+  <script src="./script/main.js">
   </script>
 </body>
 
