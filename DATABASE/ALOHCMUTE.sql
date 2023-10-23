@@ -39,9 +39,9 @@ create table `Group`(
 create table `Follow`(
 	sourceID int ,
     targetID int,
-    fCreateTime datetime not null,
-    fUpdateTime datetime not null,
-    fStatus boolean not null default 1,
+    followCreateTime datetime not null,
+    followUpdateTime datetime not null,
+    followStatus boolean not null default 1,
     primary key (sourceID, targetID),
     foreign key (sourceID) references `User`(userID),
     foreign key (targetID) references `User`(userID)
@@ -49,7 +49,7 @@ create table `Follow`(
 
 -- Tạo bảng BoxChat
 create table `BoxChat`(
-	bcID int primary key,
+	boxChatID int primary key,
     userID int,
     foreign key (userID) references `User`(userID)
 );
@@ -57,53 +57,53 @@ create table `BoxChat`(
 -- Tạo bảng Chat
 create table `Chat`(
 	chatID int primary key,
-    bcID int,
-    foreign key (bcID) references `BoxChat`(bcID)
+    boxChatID int,
+    foreign key (boxChatID) references `BoxChat`(boxChatID)
 ); 
 
 -- Tạo bảng UserPost
 create table `UserPost`(
-	upID int primary key,
+	userPostID int primary key,
     userID int,
-    upText nvarchar(5000) not null,
-    upCreateTime datetime not null,
-    upStatus boolean not null default 1,
-    upUpdateTime datetime not null,
+    userPostText nvarchar(5000) not null,
+    UserPostCreateTime datetime not null,
+    UserPostStatus boolean not null default 1,
+    userPostUpdateTime datetime not null,
 	foreign key (userID) references `User`(userID)
 );
 
 -- Tạo bảng GroupPost
 create table `GroupPost`(
-	gpID int primary key,
-    gpText nvarchar(5000) not null,
-    gpCreateTime datetime not null,
-    gpStatus boolean not null default 1,
-    gpUpdateTime datetime not null
+	groupPostID int primary key,
+    groupPostText nvarchar(5000) not null,
+    groupPostCreateTime datetime not null,
+    groupPostStatus boolean not null default 1,
+    groupPostUpdateTime datetime not null
 );
 
 -- Tạo bảng GroupMember
 create table `GroupMember`(
 	groupID int,
     userID int,
-    gpID int,
-    primary key(groupID, userID, gpID),
+    groupPostID int,
+    primary key(groupID, userID, groupPostID),
 	foreign key (groupID) references `Group`(groupID),
 	foreign key (userID) references `User`(userID),
-    foreign key (gpID) references `GroupPost`(gpID)
+    foreign key (groupPostID) references `GroupPost`(groupPostID)
 );
 
 -- Tạo bảng UserImage
 create table `UserImage`(
-	uiID int primary key,
-    upID int,
-    uiFile text not null,
-    foreign key (upID) references `UserPost`(upID)
+	userImageID int primary key,
+    userPostID int,
+    userImageFile text not null,
+    foreign key (userPostID) references `UserPost`(userPostID)
 );
 
 -- Tạo bảng GroupImage
 create table `GroupImage`(
-	giID int primary key,
-    gpID int,
-    giFile text not null,
-	foreign key (gpID) references `GroupPost`(gpID)
+	groupImageID int primary key,
+    groupPostID int,
+    groupImageFile text not null,
+	foreign key (groupPostID) references `GroupPost`(groupPostID)
 );
