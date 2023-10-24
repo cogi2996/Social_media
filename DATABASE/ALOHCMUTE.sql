@@ -1,4 +1,4 @@
-create schema if not exists ALOHCMUTE;
+create database ALOHCMUTE;
 use ALOHCMUTE;
 
 create table tbAccount(
@@ -18,7 +18,7 @@ create table tbUser(
     midName nvarchar(50),
     lastName nvarchar(50) not null,
     address nvarchar(200),
-    biography nvarchar(5000),
+    biography nvarchar(3000),
     position nvarchar(100),
     workPlace nvarchar(200),
     avatar text,
