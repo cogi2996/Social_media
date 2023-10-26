@@ -2,7 +2,8 @@ create schema if not exists ALOHCMUTE;
 use ALOHCMUTE;
 
 create table `Account`(
-	gmail varchar(100) primary key,
+    uid int primary key,
+	gmail varchar(100) unique,
     userName varchar(50) not null,
     password varchar(100) not null
 );
@@ -10,7 +11,6 @@ create table `Account`(
 -- Tạo bảng User 
 create table `User`(
 	userID int primary key,
-    gmail varchar(100),
 	mobile varchar(11),
     createDate datetime not null,
     lastLogin datetime not null,
@@ -23,7 +23,7 @@ create table `User`(
     workPlace nvarchar(200),
     avatar text,
     cover text,
-    foreign key (gmail) references `Account`(gmail)
+    foreign key (userID) references `Account`(uid)
 );
 
 -- Tạo bảng Group
@@ -86,6 +86,7 @@ create table `GroupMember`(
 	groupID int,
     userID int,
     groupPostID int,
+    permission int,
     primary key(groupID, userID, groupPostID),
 	foreign key (groupID) references `Group`(groupID),
 	foreign key (userID) references `User`(userID),
