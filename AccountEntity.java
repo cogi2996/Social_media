@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
@@ -24,8 +25,8 @@ public class AccountEntity implements Serializable{
 	private String userName;
 	@Column(columnDefinition = "varchar(100) NOT NULL")
 	private String password;
-	@OneToOne
-	UserEntity user;
+	@OneToOne(mappedBy="account", fetch=FetchType.EAGER)
+	private UserEntity user;
 	public AccountEntity() {
 		super();
 	}
