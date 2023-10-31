@@ -2,13 +2,15 @@ package vn.iotstar;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -26,9 +28,11 @@ public class GroupEntity implements Serializable{
 	@Column(columnDefinition = "NOT NULL")
 	@Temporal(value = TemporalType.DATE)
 	private Date createTime;
-	@ManyToOne
+	@ManyToMany
+	private List<UserEntity> userMember;
+	@OneToOne
 	@JoinColumn(name="createrID")
-	private UserEntity user;
+	private UserEntity userCreate;
 	public GroupEntity() {
 		super();
 	}
@@ -37,7 +41,7 @@ public class GroupEntity implements Serializable{
 		this.groupID = groupID;
 		this.groupName = groupName;
 		this.createTime = createTime;
-		this.user = user;
+		this.userCreate = user;
 	}
 	public int getGroupID() {
 		return groupID;
@@ -58,10 +62,10 @@ public class GroupEntity implements Serializable{
 		this.createTime = createTime;
 	}
 	public UserEntity getUser() {
-		return user;
+		return userCreate;
 	}
 	public void setUser(UserEntity user) {
-		this.user = user;
+		this.userCreate = user;
 	}
 	
 }

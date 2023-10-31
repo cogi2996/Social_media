@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToMany;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -50,8 +51,10 @@ public class UserEntity implements Serializable{
 	private String avatar;
 	@Column(columnDefinition = "text")
 	private String cover;
-	@OneToMany(mappedBy="user", fetch=FetchType.EAGER)
-	private List<GroupEntity> group;
+	@OneToMany(mappedBy="userCreate", fetch=FetchType.EAGER)
+	private List<GroupEntity> groupCreate;
+	@ManyToMany(mappedBy="userMember", fetch=FetchType.EAGER)
+	private List<GroupEntity> groupMember;
 	@OneToOne
 	@JoinColumn(name="userID")
 	private AccountEntity account;
