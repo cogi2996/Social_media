@@ -27,10 +27,88 @@ public class UserPost {
 	private boolean UserPostStatus;
 	private Date userPostUpdateTime;
 
-	//User đã đăng bài viết này.
-	@ManyToOne
-	@JoinColumn(name = "userID")
-	private User user;
+	// User đã đăng bài viết này.
+//	@ManyToOne
+//	@JoinColumn(name = "userID")
+//	private User user;
 
+	@Override
+	public String toString() {
+		return "UserPost [userPostID=" + userPostID + ", userID=" + userID + ", userPostText=" + userPostText
+				+ ", UserPostCreateTime=" + UserPostCreateTime + ", UserPostStatus=" + UserPostStatus
+				+ ", userPostUpdateTime=" + userPostUpdateTime + "]";
+	}
+
+	public UserPost(int userPostID, int userID, String userPostText, Date userPostCreateTime, boolean userPostStatus,
+			Date userPostUpdateTime) {
+		super();
+		this.userPostID = userPostID;
+		this.userID = userID;
+		this.userPostText = userPostText;
+		UserPostCreateTime = userPostCreateTime;
+		UserPostStatus = userPostStatus;
+		this.userPostUpdateTime = userPostUpdateTime;
+	}
+
+	public UserPost() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getUserPostID() {
+		return userPostID;
+	}
+
+	public void setUserPostID(int userPostID) {
+		this.userPostID = userPostID;
+	}
+
+	public int getUserID() {
+		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	public String getUserPostText() {
+		return userPostText;
+	}
+
+	public void setUserPostText(String userPostText) {
+		this.userPostText = userPostText;
+	}
+
+	public Date getUserPostCreateTime() {
+		return UserPostCreateTime;
+	}
+
+	public void setUserPostCreateTime(Date userPostCreateTime) {
+		UserPostCreateTime = userPostCreateTime;
+	}
+
+	public boolean isUserPostStatus() {
+		return UserPostStatus;
+	}
+
+	public void setUserPostStatus(boolean userPostStatus) {
+		UserPostStatus = userPostStatus;
+	}
+
+	public Date getUserPostUpdateTime() {
+		return userPostUpdateTime;
+	}
+
+	public void setUserPostUpdateTime(Date userPostUpdateTime) {
+		this.userPostUpdateTime = userPostUpdateTime;
+	}
+
+//	public User getUser() {
+//		return user;
+//	}
+//
+//	public void setUser(User user) {
+//		this.user = user;
+//	}
 
 }

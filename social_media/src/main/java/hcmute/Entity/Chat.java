@@ -20,6 +20,48 @@ public class Chat {
 
 	// 1-nhiều giữa chat với chatbox
 	@ManyToOne
-	@JoinColumn(name ="boxChatID")
+	@JoinColumn(name = "boxChatID")
 	private BoxChat boxChat;
+
+	@Override
+	public String toString() {
+		return "Chat [chatID=" + chatID + ", boxChatID=" + boxChatID + "]";
+	}
+
+	public Chat(int chatID, int boxChatID, BoxChat boxChat) {
+		super();
+		this.chatID = chatID;
+		this.boxChatID = boxChatID;
+		this.boxChat = boxChat;
+	}
+
+	public Chat() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getChatID() {
+		return chatID;
+	}
+
+	public void setChatID(int chatID) {
+		this.chatID = chatID;
+	}
+
+	public int getBoxChatID() {
+		return boxChatID;
+	}
+
+	public void setBoxChatID(int boxChatID) {
+		this.boxChatID = boxChatID;
+	}
+
+	public BoxChat getBoxChat() {
+		return boxChat;
+	}
+
+	public void setBoxChat(BoxChat boxChat) {
+		this.boxChat = boxChat;
+	}
+
 }

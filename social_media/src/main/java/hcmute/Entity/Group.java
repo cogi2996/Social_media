@@ -29,20 +29,87 @@ public class Group implements Serializable {
 	private String groupName;
 	@Temporal(value = TemporalType.DATE)
 	private Date createTime;
-	
+
 	// admin của group
 	@ManyToOne
 	@JoinColumn(name = "userID")
 	private User admin;
-	
+
 	// các thành viên trong group
 	@ManyToMany(mappedBy = "UserGroups")
-    private List<User> member;
-	
+	private List<User> member;
+
 	// 1 - n với grouppost
 	@OneToMany(mappedBy = "group", fetch = FetchType.EAGER)
 	private List<GroupPost> listPost;
-	
-	
+
+	@Override
+	public String toString() {
+		return "Group [groupID=" + groupID + ", groupName=" + groupName + ", createTime=" + createTime + "]";
+	}
+
+	public Group(int groupID, String groupName, Date createTime, User admin, List<User> member,
+			List<GroupPost> listPost) {
+		super();
+		this.groupID = groupID;
+		this.groupName = groupName;
+		this.createTime = createTime;
+		this.admin = admin;
+		this.member = member;
+		this.listPost = listPost;
+	}
+
+	public Group() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getGroupID() {
+		return groupID;
+	}
+
+	public void setGroupID(int groupID) {
+		this.groupID = groupID;
+	}
+
+	public String getGroupName() {
+		return groupName;
+	}
+
+	public void setGroupName(String groupName) {
+		this.groupName = groupName;
+	}
+
+	public Date getCreateTime() {
+		return createTime;
+	}
+
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+
+	public User getAdmin() {
+		return admin;
+	}
+
+	public void setAdmin(User admin) {
+		this.admin = admin;
+	}
+
+	public List<User> getMember() {
+		return member;
+	}
+
+	public void setMember(List<User> member) {
+		this.member = member;
+	}
+
+	public List<GroupPost> getListPost() {
+		return listPost;
+	}
+
+	public void setListPost(List<GroupPost> listPost) {
+		this.listPost = listPost;
+	}
 
 }

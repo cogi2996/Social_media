@@ -56,8 +56,8 @@ public class User implements Serializable {
 	private Account account;
 
 	// Các bài viết ( cá nhân ) của user.
-	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
-	private List<UserPost> userPosts;
+//	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+//	private List<UserPost> userPosts;
 
 	// Các bài viết ( group ) của user.
 	@OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
@@ -76,5 +76,195 @@ public class User implements Serializable {
 	@OneToOne
 	@JoinColumn(name = "boxChatID")
 	private BoxChat boxChat;
+
+	@Override
+	public String toString() {
+		return "User [userID=" + userID + ", mobile=" + mobile + ", createDate=" + createDate + ", lastLogin="
+				+ lastLogin + ", firstName=" + firstName + ", midName=" + midName + ", lastName=" + lastName
+				+ ", address=" + address + ", biography=" + biography + ", position=" + position + ", workPlace="
+				+ workPlace + ", avatar=" + avatar + "]";
+	}
+
+	public User(int userID, String mobile, Date createDate, Date lastLogin, String firstName, String midName,
+			String lastName, String address, String biography, String position, String workPlace, String avatar) {
+		super();
+		this.userID = userID;
+		this.mobile = mobile;
+		this.createDate = createDate;
+		this.lastLogin = lastLogin;
+		this.firstName = firstName;
+		this.midName = midName;
+		this.lastName = lastName;
+		this.address = address;
+		this.biography = biography;
+		this.position = position;
+		this.workPlace = workPlace;
+		this.avatar = avatar;
+	}
+
+	public User() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	public int getUserID() {
+		return userID;
+	}
+
+	public void setUserID(int userID) {
+		this.userID = userID;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
+	}
+
+	public Date getLastLogin() {
+		return lastLogin;
+	}
+
+	public void setLastLogin(Date lastLogin) {
+		this.lastLogin = lastLogin;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getMidName() {
+		return midName;
+	}
+
+	public void setMidName(String midName) {
+		this.midName = midName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getBiography() {
+		return biography;
+	}
+
+	public void setBiography(String biography) {
+		this.biography = biography;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	public String getWorkPlace() {
+		return workPlace;
+	}
+
+	public void setWorkPlace(String workPlace) {
+		this.workPlace = workPlace;
+	}
+
+	public String getAvatar() {
+		return avatar;
+	}
+
+	public void setAvatar(String avatar) {
+		this.avatar = avatar;
+	}
+
+	public List<Group> getCreatedGroup() {
+		return createdGroup;
+	}
+
+	public void setCreatedGroup(List<Group> createdGroup) {
+		this.createdGroup = createdGroup;
+	}
+
+	public List<Group> getUserGroups() {
+		return UserGroups;
+	}
+
+	public void setUserGroups(List<Group> userGroups) {
+		UserGroups = userGroups;
+	}
+
+	public Account getAccount() {
+		return account;
+	}
+
+	public void setAccount(Account account) {
+		this.account = account;
+	}
+
+//	public List<UserPost> getUserPosts() {
+//		return userPosts;
+//	}
+//
+//	public void setUserPosts(List<UserPost> userPosts) {
+//		this.userPosts = userPosts;
+//	}
+
+	public List<GroupPost> getGroupPosts() {
+		return groupPosts;
+	}
+
+	public void setGroupPosts(List<GroupPost> groupPosts) {
+		this.groupPosts = groupPosts;
+	}
+
+	public List<User> getFollowingUsers() {
+		return followingUsers;
+	}
+
+	public void setFollowingUsers(List<User> followingUsers) {
+		this.followingUsers = followingUsers;
+	}
+
+	public List<User> getFollowers() {
+		return followers;
+	}
+
+	public void setFollowers(List<User> followers) {
+		this.followers = followers;
+	}
+
+	public BoxChat getBoxChat() {
+		return boxChat;
+	}
+
+	public void setBoxChat(BoxChat boxChat) {
+		this.boxChat = boxChat;
+	}
 
 }
